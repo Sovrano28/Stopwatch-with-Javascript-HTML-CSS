@@ -20,7 +20,23 @@
 .wrapper p {
   position: relative;
   display: inline-block;
+  color: white;
   z-index: 9999;
   font-size: 48px;
   margin-bottom: 120px;
+}
+
+.wrapper p::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  z-index: -1; /* wow!*/
+  border-radius: 50%;
+  top: -118%;
+  left: -31%;
+  animation-name: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
