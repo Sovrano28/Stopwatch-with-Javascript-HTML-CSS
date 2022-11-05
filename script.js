@@ -1,5 +1,5 @@
 let seconds = 00;
-let tens = 00;
+let tens = 0;
 
 let stopwatchSeconds = document.querySelector('.seconds');
 let stopwatchTens = document.querySelector('.tens');
@@ -19,6 +19,7 @@ function startTimer() {
   }
 
   if(tens > 99) {
+    seconds++;
     stopwatchSeconds.innerHTML = '0' + seconds;
     tens = 0;
     stopwatchTens.innerHTML = '0' + 0;
@@ -31,5 +32,5 @@ function startTimer() {
 
 // since we need to hit the start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
 startBtn.addEventListener('click', () => {
-  setInterval(startTimer, 10)
+  setInterval(startTimer, 10);
 })
