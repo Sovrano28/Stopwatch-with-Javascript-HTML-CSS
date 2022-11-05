@@ -7,7 +7,7 @@ const startBtn = document.querySelector('.btn-start');
 const stoptBtn = document.querySelector('.btn-stop');
 const resetBtn = document.querySelector('.btn-reset');
 
-startBtn.addEventListener('click', () => {
+function startTimer() {
   tens++;
 
   if(tens <= 9) {
@@ -27,4 +27,9 @@ startBtn.addEventListener('click', () => {
   if(seconds > 9) {
     stopwatchSeconds.innerHTML = seconds;
   }
+}
+
+// since we need to hit the start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
+startBtn.addEventListener('click', () => {
+  setInterval(startTimer, 10)
 })
