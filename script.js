@@ -12,5 +12,19 @@ startBtn.addEventListener('click', () => {
 
   if(tens <= 9) {
     stopwatchTens.innerHTML = '0' + tens;
-  } 
+  }
+
+  if(tens > 9) {
+    stopwatchTens.innerHTML = tens;
+  }
+
+  if(tens > 99) {
+    stopwatchSeconds.innerHTML = '0' + seconds;
+    tens = 0;
+    stopwatchTens.innerHTML = '0' + 0;
+  }
+
+  if(seconds > 9) {
+    stopwatchSeconds.innerHTML = seconds;
+  }
 })
