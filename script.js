@@ -1,8 +1,16 @@
 let seconds = 00;
 let tens = 00;
 
-let watchSeconds = document.querySelectorAll('.seconds');
-let watchTens = document.querySelectorAll('.tens');
-const startBtn = document.querySelectorAll('.btn-start');
-const stoptBtn = document.querySelectorAll('.btn-stop');
-const resetBtn = document.querySelectorAll('.btn-reset');
+let stopwatchSeconds = document.querySelector('.seconds');
+let stopwatchTens = document.querySelector('.tens');
+const startBtn = document.querySelector('.btn-start');
+const stoptBtn = document.querySelector('.btn-stop');
+const resetBtn = document.querySelector('.btn-reset');
+
+startBtn.addEventListener('click', () => {
+  tens++;
+
+  if(tens <= 9) {
+    stopwatchTens.innerHTML = '0' + tens;
+  } 
+})
