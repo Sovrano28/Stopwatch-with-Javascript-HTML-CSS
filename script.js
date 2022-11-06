@@ -40,6 +40,8 @@ startBtn.addEventListener('click', () => {
 // this is the pause button
 stopBtn.addEventListener('click', () => {
   clearInterval(watchInterval);
+
+  startBtn.innerHTML = 'Continue';
 });
 
 // the reset button
@@ -48,7 +50,8 @@ resetBtn.addEventListener('click', () => {
 
   tens = '00';
   seconds = '00';
-
   stopwatchSeconds.innerHTML = seconds;
   stopwatchTens.innerHTML = tens;
+
+  startBtn.innerHTML = 'Start';
 });
