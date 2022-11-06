@@ -7,6 +7,8 @@ const startBtn = document.querySelector('.btn-start');
 const stoptBtn = document.querySelector('.btn-stop');
 const resetBtn = document.querySelector('.btn-reset');
 
+let watchInterval; // creating a variable so as to be able to clear it.
+
 function startTimer() {
   tens++;
 
@@ -32,5 +34,10 @@ function startTimer() {
 
 // since we need to hit the start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
 startBtn.addEventListener('click', () => {
-  setInterval(startTimer, 10);
+  watchInterval = setInterval(startTimer, 10);
+})
+
+// this is the pause button
+stoptBtn.addEventListener('click', () => {
+  clearInterval(watchInterval);
 })
