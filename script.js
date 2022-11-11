@@ -34,11 +34,7 @@ function startTimer() {
 
 // since we need to hit the(previous) start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
 startBtn.addEventListener('click', () => {
-  if (stopwatchTens.innerHTML == '00') {
-    watchInterval = setInterval(startTimer, 10);
-  } else {
-    // do nothing
-  }
+  watchInterval = setInterval(startTimer, 10);
 });
 
 // this is the pause button
