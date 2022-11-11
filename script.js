@@ -1,4 +1,4 @@
-let seconds = 00;
+let seconds = 0;
 let tens = 0;
 
 let stopwatchSeconds = document.querySelector('.seconds');
@@ -34,7 +34,11 @@ function startTimer() {
 
 // since we need to hit the(previous) start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
 startBtn.addEventListener('click', () => {
-  watchInterval = setInterval(startTimer, 10);
+  if (stopwatchTens.innerHTML == '00') {
+    watchInterval = setInterval(startTimer, 10);
+  } else {
+    // do nothing
+  }
 });
 
 // this is the pause button
