@@ -35,6 +35,65 @@ hr.header-line {
   margin-top: 5px;
 }
 
+.flex-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 0.25rem 0;
+}
+
+.theme-btn-container {
+  margin-right: 1rem;
+  padding: 0.2rem;
+  border: 1px solid rgb(0, 62, 153);
+}
+
+.theme-btn-container:hover .dropdown-content { /* to display the links on hover*/
+  display: block;
+}
+
+.change span {
+  padding: 0.1rem;
+  color: rgb(0, 62, 153);
+}
+
+.dropdown-content {
+  position: absolute;
+  min-width: 5rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.theme-list {
+  list-style: none;
+}
+
+.theme-list li {
+  display: flex;
+}
+
+.theme-list li span {
+  padding: 0.2rem;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.default {
+  color: rgb(0, 62, 153);
+}
+
+.theme-2 {
+  color: rgb(0, 62, 153);
+}
+
+.theme-3 {
+  color: rgb(0, 62, 153);
+}
+
 .wrapper {
   position: relative;
   top: 50%;
