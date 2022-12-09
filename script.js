@@ -55,3 +55,15 @@ resetBtn.addEventListener('click', () => {
 
   startBtn.innerHTML = 'Start';
 });
+
+// theme change buttons
+const theme2Btn = document.querySelector('.theme-2-btn');
+
+theme2Btn.addEventListener('click', () => {
+  document.querySelector('.container').style.backgroundColor = '#FBEAFF';
+  document.querySelector('h1').style.color = '#7C7484';
+  document.querySelector('.change span').style.color = '#7C7484';
+  document.querySelector('.wrapper p').style.color = '#FBEAFF';
+  document.querySelector('.wrapper p').style.setProperty('--before-background', '#7C7484'); // this solution was massive.
+  // document.getElementsByClassName('.watchBtn .btn').style.backgroundColor = '#7C7484';
+});
