@@ -30,7 +30,7 @@ function startTimer() {
   if(seconds > 9) {
     stopwatchSeconds.innerHTML = seconds;
   }
-}
+};
 
 // since we need to hit the(previous) start button continually for the tens to increase at all, this function will help us run thefunction startTimer() above continually.
 startBtn.addEventListener('click', () => {
@@ -57,21 +57,29 @@ resetBtn.addEventListener('click', () => {
 });
 
 // theme change buttons
+const defaultThemeBtn = document.querySelector('.theme-1-btn');
+
+defaultThemeBtn.addEventListener('click', () => {
+  document.querySelector("body").classList.remove("theme-2");
+});
+
 const theme2Btn = document.querySelector('.theme-2-btn');
 
 theme2Btn.addEventListener('click', () => {
-  document.querySelector('.header .bi-stopwatch').style.color = '#96C0BA';
-  document.querySelector('.container').style.backgroundColor = '#FBEAFF';
-  document.querySelector('h1').style.color = '#665B69';
-  document.querySelector('.change span').style.color = '#665B69';
-  document.querySelector('.wrapper p').style.color = '#96C0BA';
-  document.querySelector('.wrapper p').style.setProperty('--before-background', '#665B69'); // this solution was massive.
+  document.querySelector("body").classList.add("theme-2");
 
-  // the buttons
-  document.querySelector('.btn-start').style.backgroundColor = '#665B69';
-  document.querySelector('.btn-stop').style.backgroundColor = '#665B69';
-  document.querySelector('.btn-reset').style.backgroundColor = '#665B69';
-  document.querySelector('.btn-start').style.color = '#96C0BA';
-  document.querySelector('.btn-stop').style.color = '#96C0BA';
-  document.querySelector('.btn-reset').style.color = '#96C0BA';
+  // document.querySelector('.header .bi-stopwatch').style.color = '#96C0BA';
+  // document.querySelector('.container').style.backgroundColor = '#FBEAFF';
+  // document.querySelector('h1').style.color = '#665B69';
+  // document.querySelector('.change span').style.color = '#665B69';
+  // document.querySelector('.wrapper p').style.color = '#96C0BA';
+  // document.querySelector('.wrapper p').style.setProperty('--before-background', '#665B69'); // this solution was massive.
+
+  // // the buttons
+  // document.querySelector('.btn-start').style.backgroundColor = '#665B69';
+  // document.querySelector('.btn-stop').style.backgroundColor = '#665B69';
+  // document.querySelector('.btn-reset').style.backgroundColor = '#665B69';
+  // document.querySelector('.btn-start').style.color = '#96C0BA';
+  // document.querySelector('.btn-stop').style.color = '#96C0BA';
+  // document.querySelector('.btn-reset').style.color = '#96C0BA';
 });
