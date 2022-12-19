@@ -60,10 +60,18 @@ resetBtn.addEventListener('click', () => {
 const theme2Btn = document.querySelector('.theme-2-btn');
 
 theme2Btn.addEventListener('click', () => {
+  document.querySelector('.header .bi-stopwatch').style.color = '#96C0BA';
   document.querySelector('.container').style.backgroundColor = '#FBEAFF';
-  document.querySelector('h1').style.color = '#7C7484';
-  document.querySelector('.change span').style.color = '#7C7484';
-  document.querySelector('.wrapper p').style.color = '#FBEAFF';
-  document.querySelector('.wrapper p').style.setProperty('--before-background', '#7C7484'); // this solution was massive.
-  // document.getElementsByClassName('.watchBtn .btn').style.backgroundColor = '#7C7484';
+  document.querySelector('h1').style.color = '#665B69';
+  document.querySelector('.change span').style.color = '#665B69';
+  document.querySelector('.wrapper p').style.color = '#96C0BA';
+  document.querySelector('.wrapper p').style.setProperty('--before-background', '#665B69'); // this solution was massive.
+
+  // the buttons
+  document.querySelector('.btn-start').style.backgroundColor = '#665B69';
+  document.querySelector('.btn-stop').style.backgroundColor = '#665B69';
+  document.querySelector('.btn-reset').style.backgroundColor = '#665B69';
+  document.querySelector('.btn-start').style.color = '#96C0BA';
+  document.querySelector('.btn-stop').style.color = '#96C0BA';
+  document.querySelector('.btn-reset').style.color = '#96C0BA';
 });
